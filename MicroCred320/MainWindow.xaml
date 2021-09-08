@@ -14,18 +14,20 @@
             <RowDefinition/>
             <RowDefinition/>
             <RowDefinition/>
-            <RowDefinition/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition/>
+            <ColumnDefinition Width="0.5*"/>
+            <ColumnDefinition Width="0.5*"/>
             <ColumnDefinition />
-            <ColumnDefinition Width="1.5*"/>
-            <ColumnDefinition Width="2*" />
         </Grid.ColumnDefinitions>
 
-        <Label x:Name="lbSum" Grid.Column="0" Grid.Row="0" Content="Сумма займа" />
+        <Button x:Name="btnSave"  Grid.Column="0" Grid.Row="0" Content="Сохранить" FontSize="22"/>
+        <TextBlock x:Name="tbSum" Grid.Column="0" Grid.Row="1" Text="Сумма займа" FontSize="22" VerticalAlignment="Bottom" HorizontalAlignment="Center"/>
+        <TextBlock x:Name="tbTerm"  Grid.Column="0" Grid.Row="2" Text="Срок займа" FontSize="22" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+        <Button x:Name="btnCalculate"  Grid.Column="0" Grid.Row="4" Content="Рассчитать" FontSize="22"/>
+        <Button x:Name="btnReset"  Grid.Column="0" Grid.Row="5" Content="Сбросить" FontSize="22"/>
 
-        <TextBox Grid.Column="1" Grid.Row="0" Grid.RowSpan="6"/>
-        <TextBox Grid.Column="2" Grid.Row="0" Grid.RowSpan="7"/>
+        <TextBox Grid.Column="2" Grid.Row="0" Grid.RowSpan="5"/>
+        <TextBox Grid.Column="3" Grid.Row="0" Grid.RowSpan="6"/>
     </Grid>
 </Window>
