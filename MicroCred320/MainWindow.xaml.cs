@@ -40,5 +40,10 @@ namespace MicroCred320
             tbEffRate.Text = $"Эффективная ставка: {Convert.ToString(Math.Round(percentSum / loanSum / term * 100, 2))}";
             tbxResult.Text = Convert.ToString(loanSum);
         }
+
+        public void Calculate()
+        {
+
+        }
     }
 }
