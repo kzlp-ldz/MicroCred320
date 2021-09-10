@@ -73,18 +73,19 @@ namespace MicroCred320
                 tbCreditSum.Text = $"Сумма долга: {Convert.ToString(cumulatively[term - 1])}";
                 tbEffRate.Text = $"Эффективная ставка: {(((cumulatively[term - 1] / loanSum) / term) * 100)}";
                 tbxResult.Text = string.Join(Environment.NewLine, result);
-            }   
+            }
 
         }
 
         private void btnReset_Click(object sender, RoutedEventArgs e)
         {
-            daysOnTerm = null;
-            daysOnTerm = new Dictionary<int, double>();
-            tbDetail.Text = "";
-            lbPaymentSum.Content = "Общая сумма выплаты: ";
-            lbPercentSum.Content = "Сумма процентов: ";
-            lbEffRate.Content = "Эффективная ставка: ";
+            result = null;
+            tbxResult.Text = "";
+            tbPaymentSum.Text = "Общая сумма выплаты: ";
+            tbCreditSum.Text = "Сумма процентов: ";
+            tbEffRate.Text = "Эффективная ставка: ";
+            tbxCreditSum.Text = "";
+            tbxCreditTerm.Text = "";
         }
     }
 }
