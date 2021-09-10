@@ -24,5 +24,21 @@ namespace MicroCred320
         {
             InitializeComponent();
         }
+
+        private void btnCalculate_Click(object sender, RoutedEventArgs e)
+        {
+            double loanSum = double.Parse(tbxCreditSum.Text);
+            int term = int.Parse(tbxCreditTerm.Text);
+
+            //Сделать ввод из текстового файла. Возможно словарь - день:процент. В тхт файле "от до %"
+            double percent = 0.8;
+
+            double percentSum = loanSum * percent / 100 * term;
+
+            tbPaymentSum.Text = $"Общая сумма выплаты: {Convert.ToString(loanSum + percentSum)}";
+            tbCreditSum.Text = $"Сумма долга: {Convert.ToString(percentSum)}";
+            tbEffRate.Text = $"Эффективная ставка: {Convert.ToString(Math.Round(percentSum / loanSum / term * 100, 2))}";
+            tbxResult.Text = Convert.ToString(loanSum);
+        }
     }
 }
